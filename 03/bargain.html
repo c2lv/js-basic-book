@@ -25,5 +25,22 @@
 		</ul>
 		<div id="showResult"></div>	
 	</div>	
+
+	<script>
+		function showPrice( ) {
+			var originPrice = document.querySelector("#oPrice").value;
+			var rate = document.querySelector("#rate").value;
+			var savedPrice = originPrice * (rate / 100);
+			var resultPrice = originPrice - savedPrice;
+			document.querySelector("#showResult").innerHTML = "상품의 원래 가격은 " + originPrice + "원이고, 할인율은 " + rate + "%입니다." + savedPrice + "원을 절약한 " + resultPrice + "원에 살 수 있습니다.";
+			// document.querySelector("#showResult").innerHTML = `상품의 원래 가격은 ${originPrice}원이고, 할인율은 ${rate}%입니다. ${savedPrice}원을 절약한 ${resultPrice}원에 살 수 있습니다.`;
+			/*
+			ES6 버전부터는 문자열 안에 값을 채우는 방법인 '템플릿 문자열'이 새로 도입되었습니다. 문자열과 값 그리
+			고 다시 문자열을 연결하는 방식이 아니라, 문자열 안에 값을 끼워 넣는 방식이죠. 템플릿 문자열을 사용할 때
+			는 문자열을 백 쿼트(`)로 묶고, 값이 들어가는 부분은 ${} 사이에 표시합니다. 백 쿼트(Back Quote)는 그레
+			이브(Grave)나 백 틱(Back Tick)이라고도 부릅니다.
+			*/
+		}
+	</script>
 </body>
 </html>

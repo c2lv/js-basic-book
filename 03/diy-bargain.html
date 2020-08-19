@@ -25,5 +25,18 @@
 		</ul>
 		<div id="showResult"></div>	
 	</div>	
+	<script>
+		function showPrice() {
+			var originPrice = document.querySelector('#oPrice').value;
+			var rate = document.querySelector('#rate').value;
+			if (originPrice && rate != null) {
+				var savedPrice = originPrice * rate / 100;
+				var resultPrice = originPrice - savedPrice;
+				document.querySelector('#showResult').innerHTML = `원래 가격: ${originPrice}, 할인율: ${rate}, 절약한 가격: ${savedPrice}, 할인 가격: ${resultPrice}`;
+				// document.querySelector('#showResult').innerHTML(`원래 가격: ${originPrice}, 할인율: ${rate}, 절약한 가격: ${savedPrice}, 할인 가격: ${resultPrice}`);
+				// 위 코드로 써서 동작 안 함
+			}
+		}
+	</script>
 </body>
 </html>
