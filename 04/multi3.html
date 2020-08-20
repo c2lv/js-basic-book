@@ -9,5 +9,24 @@
 </head>
 <body>
 	<div id="result"></div>
+
+	<script>
+		var userNumber = prompt("숫자를 입력하세요.");
+		var displayArea = document.querySelector('#result');
+
+		// if...else문을 만들 때 true가 될 경우가 많은 조건을 if문에 넣고 다른 조건을 else문에서 처리하는 것이 좋습니다.
+		// (그 반대일 때보다 if문만 실행하고 else문은 넘어갈 경우가 더 많아져 평균적인 프로그램 실행 시간이 더 짧아짐)
+		if(userNumber != null) {
+			if(userNumber % 3 === 0) {
+				displayArea.innerHTML = userNumber + "은 3의 배수입니다.";
+			}
+			else {
+				displayArea.innerHTML = userNumber + "은 3의 배수가 아닙니다.";
+			}
+		}
+		else {
+			alert("입력이 취소되었습니다.");
+		}
+	</script>
 </body>
 </html>
